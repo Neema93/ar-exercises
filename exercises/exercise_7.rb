@@ -22,3 +22,15 @@ puts "----------"
 # 4. Display the error messages provided back from ActiveRecord to the user (one on each line) after you attempt to save/create the record
 
 # Your code goes here ...
+@store1 = Store.find(1)
+puts "Please give me a Employee first name:"
+@f_name = gets.chomp
+puts "Please give me a Employee last name:"
+@l_name = gets.chomp
+puts "Please give me a Employee hourly_rate:"
+@hourly_rate = gets.chomp
+
+Employee.create(store_id: @store1.id, first_name: @f_name, last_name: @l_name, hourly_rate: @hourly_rate)
+puts @f_name.errors.full_messages
+puts @l_name.errors.full_messages
+puts @hourly_rate.errors.full_messages
