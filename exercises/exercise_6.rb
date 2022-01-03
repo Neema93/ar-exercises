@@ -26,8 +26,9 @@ puts "----------"
 #     (Burnaby) and `@store2` (Richmond). Eg: `@store1.employees.create(...)`.
 
 # Your code goes here ...
-@store1.employees.create(first_name: "Khurram", last_name: "Virani", hourly_rate: 60)
-@store2.employee.create(first_name: "Komal", last_name: "Bhatt", hourly_rate: 120)
-@store1.employee.create(first_name: "Neema", last_name: "Patel", hourly_rate: 100)
-@store2.employee.create(first_name:"Heeya", last_name: "Patel", hourly_rate:130)
-@store1.employee.create(first_name:"Meet", last_name: "Patel", hourly_rate:140)
+@store1 = Store.find(1)
+@store2 = Store.find(2)
+Employee.create(store_id: @store1.id, first_name: "Khurram", last_name: "Virani", hourly_rate: 60)
+Employee.create(store_id: @store2.id, first_name: "Neema", last_name: "Patel", hourly_rate: 100)
+Employee.create(store_id: @store1.id, first_name: "Komal", last_name: "Bhatt", hourly_rate: 120)
+Employee.create(store_id: @store2.id, first_name: "Heeya", last_name: "Patel", hourly_rate: 130)
