@@ -8,6 +8,6 @@ puts "----------"
 # 3. Update the first store (`@store1`) instance in the database. (Change its name or something.)
 # Your code goes here ...
 @store1 = Store.where(id: 1).first
-@store2 = Store.second
+@store2 = Store.where(id: 2).second
 
 @store1.update(name: 'Gass')
